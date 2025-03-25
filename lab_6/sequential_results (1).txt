@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-8.3.5, pluggy-1.5.0
+rootdir: /workspaces/stt_lab1/algorithms
+plugins: xdist-3.6.1, run-parallel-0.3.1
+collected 414 items
+
+tests/test_array.py ...........................                          [  6%]
+tests/test_automata.py .                                                 [  6%]
+tests/test_backtrack.py .........................                        [ 12%]
+tests/test_bfs.py ...                                                    [ 13%]
+tests/test_bit.py .............................                          [ 20%]
+tests/test_compression.py .....                                          [ 21%]
+tests/test_dfs.py ........                                               [ 23%]
+tests/test_dp.py ...............................                         [ 31%]
+tests/test_graph.py ....................                                 [ 35%]
+tests/test_greedy.py .                                                   [ 36%]
+tests/test_heap.py .....                                                 [ 37%]
+tests/test_histogram.py .                                                [ 37%]
+tests/test_iterative_segment_tree.py .........                           [ 39%]
+tests/test_linkedlist.py ............                                    [ 42%]
+tests/test_map.py .........................                              [ 48%]
+tests/test_maths.py ..................................................   [ 60%]
+tests/test_matrix.py .............                                       [ 64%]
+tests/test_ml.py ..                                                      [ 64%]
+tests/test_monomial.py ........                                          [ 66%]
+tests/test_polynomial.py .......                                         [ 68%]
+tests/test_queues.py .....                                               [ 69%]
+tests/test_search.py .............                                       [ 72%]
+tests/test_set.py .                                                      [ 72%]
+tests/test_sort.py ....................                                  [ 77%]
+tests/test_stack.py ..........                                           [ 79%]
+tests/test_streaming.py ....                                             [ 80%]
+tests/test_strings.py .................................................. [ 92%]
+..............                                                           [ 96%]
+tests/test_tree.py ...........                                           [ 99%]
+tests/test_unix.py ....                                                  [100%]
+
+============================= 414 passed in 4.16s ==============================

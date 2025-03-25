@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-8.3.5, pluggy-1.5.0
+rootdir: /workspaces/stt_lab1/algorithms
+plugins: xdist-3.6.1, run-parallel-0.3.1
+created: 2/2 workers
+2 workers [414 items]
+
+........................................................................ [ 17%]
+.FF...............F..................................................... [ 34%]
+........................................................................ [ 52%]
+........................................................................ [ 69%]
+........................................................................ [ 86%]
+......................................................                   [100%]
+=================================== FAILURES ===================================
+__________________________ TestBinaryHeap.test_insert __________________________
+[gw0] linux -- Python 3.12.1 /workspaces/stt_lab1/test_env/bin/python
+
+self = <test_heap.TestBinaryHeap testMethod=test_insert>
+
+    def test_insert(self):
+        # Before insert 2: [0, 4, 50, 7, 55, 90, 87]
+        # After insert:  [0, 2, 50, 4, 55, 90, 87, 7]
+        self.min_heap.insert(2)
+>       self.assertEqual([0, 2, 50, 4, 55, 90, 87, 7],
+                         self.min_heap.heap)
+E       AssertionError: Lists differ: [0, 2, 50, 4, 55, 90, 87, 7] != [0, 2, 2, 4, 50, 90, 87, 7, 55]
+E       
+E       First differing element 2:
+E       50
+E       2
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 8:
+E       55
+E       
+E       - [0, 2, 50, 4, 55, 90, 87, 7]
+E       + [0, 2, 2, 4, 50, 90, 87, 7, 55]
+
+tests/test_heap.py:29: AssertionError
+________________________ TestBinaryHeap.test_remove_min ________________________
+[gw0] linux -- Python 3.12.1 /workspaces/stt_lab1/test_env/bin/python
+
+self = <test_heap.TestBinaryHeap testMethod=test_remove_min>
+
+    def test_remove_min(self):
+        ret = self.min_heap.remove_min()
+        # Before remove_min : [0, 4, 50, 7, 55, 90, 87]
+        # After remove_min: [7, 50, 87, 55, 90]
+        # Test return value
+>       self.assertEqual(4, ret)
+E       AssertionError: 4 != 7
+
+tests/test_heap.py:38: AssertionError
+_________________________ TestSuite.test_is_palindrome _________________________
+[gw0] linux -- Python 3.12.1 /workspaces/stt_lab1/test_env/bin/python
+
+self = <test_linkedlist.TestSuite testMethod=test_is_palindrome>
+
+    def test_is_palindrome(self):
+>       self.assertTrue(is_palindrome(self.l))
+E       AssertionError: False is not true
+
+tests/test_linkedlist.py:167: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_heap.py::TestBinaryHeap::test_insert - AssertionError: List...
+FAILED tests/test_heap.py::TestBinaryHeap::test_remove_min - AssertionError: ...
+FAILED tests/test_linkedlist.py::TestSuite::test_is_palindrome - AssertionErr...
+======================== 3 failed, 411 passed in 8.82s =========================

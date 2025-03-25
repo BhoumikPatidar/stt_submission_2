@@ -1,0 +1,79 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-8.3.5, pluggy-1.5.0
+rootdir: /workspaces/stt_lab1/algorithms
+plugins: xdist-3.6.1, run-parallel-0.3.1
+collected 416 items
+
+tests/test_array.py ..................F...F......                        [  6%]
+tests/test_automata.py .                                                 [  7%]
+tests/test_backtrack.py .........................                        [ 13%]
+tests/test_bfs.py ...                                                    [ 13%]
+tests/test_bit.py .............................                          [ 20%]
+tests/test_compression.py .....                                          [ 22%]
+tests/test_dfs.py ........                                               [ 24%]
+tests/test_dp.py ...............................                         [ 31%]
+tests/test_graph.py ....................                                 [ 36%]
+tests/test_greedy.py .                                                   [ 36%]
+tests/test_heap.py .....                                                 [ 37%]
+tests/test_histogram.py .                                                [ 37%]
+tests/test_iterative_segment_tree.py .........                           [ 40%]
+tests/test_linkedlist.py ............                                    [ 43%]
+tests/test_map.py .........................                              [ 49%]
+tests/test_maths.py ..................................................   [ 61%]
+tests/test_matrix.py .............                                       [ 64%]
+tests/test_ml.py ..                                                      [ 64%]
+tests/test_monomial.py ........                                          [ 66%]
+tests/test_polynomial.py .......                                         [ 68%]
+tests/test_queues.py .....                                               [ 69%]
+tests/test_search.py .............                                       [ 72%]
+tests/test_set.py .                                                      [ 72%]
+tests/test_sort.py ....................                                  [ 77%]
+tests/test_stack.py ..........                                           [ 80%]
+tests/test_streaming.py ....                                             [ 81%]
+tests/test_strings.py .................................................. [ 93%]
+..............                                                           [ 96%]
+tests/test_tree.py ...........                                           [ 99%]
+tests/test_unix.py ....                                                  [100%]
+
+=================================== FAILURES ===================================
+__________________ TestRemoveDuplicate.test_remove_duplicates __________________
+
+self = <test_array.TestRemoveDuplicate testMethod=test_remove_duplicates>
+
+    def test_remove_duplicates(self):
+>       self.assertListEqual(remove_duplicates([1,1,1,2,2,2,3,3,4,4,5,6,7,7,7,8,8,9,10,10]))
+E       TypeError: TestCase.assertListEqual() missing 1 required positional argument: 'list2'
+
+tests/test_array.py:305: TypeError
+___________________ TestSummaryRanges.test_summarize_ranges ____________________
+
+self = <test_array.TestSummaryRanges testMethod=test_summarize_ranges>
+
+    def test_summarize_ranges(self):
+    
+>       self.assertListEqual(summarize_ranges([0, 1, 2, 4, 5, 7]),
+                             [(0, 2), (4, 5), (7, 7)])
+E       AssertionError: Lists differ: ['0-2', '4-5', '7'] != [(0, 2), (4, 5), (7, 7)]
+E       
+E       First differing element 0:
+E       '0-2'
+E       (0, 2)
+E       
+E       - ['0-2', '4-5', '7']
+E       + [(0, 2), (4, 5), (7, 7)]
+
+tests/test_array.py:349: AssertionError
+=============================== warnings summary ===============================
+algorithms/strings/validate_coordinates.py:49
+  /workspaces/stt_lab1/algorithms/algorithms/strings/validate_coordinates.py:49: SyntaxWarning: invalid escape sequence '\d'
+    return bool(re.match("-?(\d|[1-8]\d|90)\.?\d*, -?(\d|[1-9]\d|1[0-7]\d|180)\.?\d*$", coordinates))
+
+algorithms/tree/construct_tree_postorder_preorder.py:1
+  /workspaces/stt_lab1/algorithms/algorithms/tree/construct_tree_postorder_preorder.py:1: SyntaxWarning: invalid escape sequence '\ '
+    """
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_array.py::TestRemoveDuplicate::test_remove_duplicates - Typ...
+FAILED tests/test_array.py::TestSummaryRanges::test_summarize_ranges - Assert...
+================== 2 failed, 414 passed, 2 warnings in 4.69s ===================
